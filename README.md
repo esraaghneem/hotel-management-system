@@ -1,59 +1,585 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <h1 align="center">Hotel Management System</h1>
 </p>
 
-## About Laravel
+<p align="center">
+  A Laravel REST API for managing hotel operations, bookings, rooms, staff, shifts, tasks, and guest service requests.
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p align="center">
+  <a href="https://github.com/esraaghneem/hotel-management">
+    <img src="https://img.shields.io/badge/Backend-Laravel%2012-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel">
+  </a>
+  <img src="https://img.shields.io/badge/PHP-8.2%2B-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
+  <img src="https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+  <img src="https://img.shields.io/badge/Auth-Laravel%20Sanctum-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Sanctum">
+  <img src="https://img.shields.io/badge/API-RESTful-02569B?style=for-the-badge" alt="REST API">
+</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<p align="center">
+  <a href="https://github.com/esraaghneem/hotel-management">
+    <strong>GitHub Repository</strong>
+  </a>
+  &nbsp; • &nbsp;
+  <a href="https://hotel-management-system-production-97bb.up.railway.app">
+    <strong>Live API</strong>
+  </a>
+</p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🏨 About the Project
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+**Hotel Management System** is a backend-focused hotel management application built with **Laravel 12** and **MySQL**.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+The system provides a RESTful API that supports hotel operations through separate customer and staff workflows.
 
-## Laravel Sponsors
+The backend manages:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- Customer authentication
+- Hotel room management
+- Room bookings
+- Staff management
+- Staff roles and departments
+- Shifts
+- Tasks and task assignment
+- Guest service requests
+- Fixed task templates
+- Role-based access control
+- Protected API endpoints
+- Staff availability and workload rules
 
-### Premium Partners
+The project was designed with a focus on clean architecture, separation of responsibilities, secure authentication, validation, and maintainable business logic.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## 🎯 System Architecture
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+The application is organized around three main areas:
 
-## Code of Conduct
+    Hotel Management System
+              |
+       +------+------+
+       |             |
+    Customer       Staff
+     System        System
+       |             |
+   +---+---+    +----+---------+
+   |       |    |              |
+Customers Bookings Management Operations
+                 |              |
+             Staff/Roles     Tasks
+             Departments        |
+                           Service Requests
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## 🛠️ Technology Stack
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Backend
 
-## License
+- PHP
+- Laravel 12
+- MySQL
+- Laravel Sanctum
+- Eloquent ORM
+- RESTful API
+- Form Requests
+- API Resources
+- Service Layer architecture
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Development & Testing
+
+- Visual Studio Code
+- PowerShell
+- Postman
+- phpMyAdmin
+- Git
+- GitHub
+
+### Deployment
+
+- Railway
+
+---
+
+## ✨ Main Features
+
+### 👤 Customer Management
+
+The customer side supports:
+
+- Customer registration
+- Customer authentication
+- Customer login/logout
+- Customer profile access
+- Room browsing
+- Room booking
+- Booking management
+- Guest service requests
+
+Customer records use `customer_id` as the primary key.
+
+---
+
+### 🛏️ Room Management
+
+The system provides room management functionality including:
+
+- Creating rooms
+- Viewing rooms
+- Updating rooms
+- Deleting rooms
+- Room number validation
+- Room image handling
+- Room availability management
+- Protected room modification operations
+
+Room updates support partial field updates and validate room number uniqueness.
+
+---
+
+### 📅 Booking Management
+
+Bookings are connected to customers and rooms and are used as the foundation for hotel operations.
+
+The system validates booking-related operations before allowing dependent actions such as guest service requests.
+
+Service requests require the customer to have an active booking.
+
+---
+
+### 👨‍💼 Staff Management
+
+The system supports hotel staff management through protected API endpoints.
+
+Staff records include information such as:
+
+- Name
+- Email
+- Phone
+- Password
+- Department
+- Role
+- Active status
+- Profile image
+
+Staff management includes:
+
+- Creating staff
+- Updating staff roles
+- Activating/deactivating staff
+- Assigning departments
+- Managing staff access through roles
+
+---
+
+## 🔐 Authentication & Authorization
+
+The application uses **Laravel Sanctum** for API authentication.
+
+Staff authentication is handled through a dedicated `staff` guard.
+
+Authenticated staff can be accessed using:
+
+    Auth::guard('staff')->user()
+
+Protected API routes use Sanctum authentication together with staff authorization middleware.
+
+---
+
+## 👥 Staff Roles
+
+The system defines different staff roles according to their responsibilities:
+
+| Role | Responsibility |
+|------|----------------|
+| General Manager | Overall hotel management and access to system-wide operations |
+| Supervisor | Supervises staff and operations within the assigned department |
+| Service Manager | Manages service-related operations within the department |
+| Employee | Performs assigned operational tasks |
+
+Access to protected functionality depends on the authenticated staff member's role and department.
+
+---
+
+## 🏢 Department-Based Access
+
+Staff members are associated with departments.
+
+Department-based authorization is used to control access to functionality such as fixed task templates.
+
+For example:
+
+- **General Manager** can access all fixed task templates.
+- **Supervisor** can access templates related to their department.
+- **Service Manager** can access templates related to their department.
+- Other roles are restricted from accessing fixed task management.
+
+---
+
+## 📋 Task Management
+
+The system includes task management for hotel staff.
+
+Tasks can be associated with:
+
+- Staff members
+- Fixed task templates
+- Task items
+- Service operations
+
+The system also considers staff availability and existing workload when assigning operational work.
+
+A staff member does not simply become unavailable because their shift has ended.
+
+If the staff member still has pending or in-progress work, their assigned tasks remain accessible until the work is completed.
+
+At the same time, assigning new work is restricted according to the staff member's current availability and shift rules.
+
+---
+
+## 🧩 Fixed Tasks
+
+The system supports predefined task templates through fixed tasks.
+
+Fixed tasks provide reusable definitions for recurring hotel operations.
+
+Access is controlled according to staff role and department.
+
+Endpoint:
+
+    GET /api/fixed-tasks
+
+Access is protected using:
+
+    auth:sanctum
+    staff
+
+---
+
+## 🧹 Guest Service Requests
+
+Guests can request hotel services through the system.
+
+Service requests are connected to active bookings and are handled through the staff workflow.
+
+A service request cannot be created unless the customer has an active booking.
+
+The system uses the configured hotel timezone:
+
+    Asia/Damascus
+
+---
+
+## 🏗️ Backend Architecture
+
+The backend follows a layered architecture designed to keep controllers lightweight and business logic organized.
+
+    Request
+       |
+      Route
+       |
+    Middleware
+       |
+    Controller
+       |
+    Form Request
+       |
+    Service Layer
+       |
+    Eloquent Model
+       |
+    MySQL Database
+
+### Controllers
+
+Controllers are responsible for handling HTTP requests and returning API responses.
+
+### Form Requests
+
+Form Requests handle:
+
+- Input validation
+- Required fields
+- Data formats
+- Business-related validation rules
+
+### Services
+
+Service classes contain the main business logic and keep controllers focused on request handling.
+
+### Models
+
+Eloquent models represent database entities and their relationships.
+
+---
+
+## 📁 Project Structure
+
+    app/
+    ├── Http/
+    │   ├── Controllers/
+    │   ├── Requests/
+    │   └── Resources/
+    │
+    ├── Models/
+    │
+    └── Services/
+
+    database/
+    ├── migrations/
+    └── seeders/
+
+    routes/
+    └── api.php
+
+    config/
+    bootstrap/
+    public/
+    resources/
+    storage/
+    tests/
+
+---
+
+## 🗄️ Database
+
+The project uses **MySQL** with the database:
+
+    hotel_management
+
+The system contains entities for the main hotel operations, including:
+
+    Customers
+    Staff
+    Departments
+    Rooms
+    Bookings
+    Tasks
+    Fixed Tasks
+    Task Items
+    Service Requests
+
+Relationships between these entities are handled through Laravel Eloquent relationships and database foreign keys.
+
+---
+
+## 🔌 REST API
+
+The application exposes RESTful API endpoints for the different areas of the system.
+
+### Authentication
+
+    POST   /api/login
+    POST   /api/logout
+    GET    /api/user
+
+### Customers
+
+Customer-related endpoints handle customer information and booking-related operations.
+
+### Rooms
+
+    GET      /api/rooms
+    POST     /api/rooms
+    GET      /api/rooms/{id}
+    PUT      /api/rooms/{id}
+    PATCH    /api/rooms/{id}
+    DELETE   /api/rooms/{id}
+
+Room modification operations are protected according to the application's authorization rules.
+
+### Staff
+
+    POST   /api/staff
+
+Staff management also includes operations for updating roles and active status.
+
+### Fixed Tasks
+
+    GET   /api/fixed-tasks
+
+Access depends on the authenticated staff member's role and department.
+
+### Bookings & Service Requests
+
+The API provides protected endpoints for booking operations and guest service requests.
+
+Service request operations require an active booking.
+
+---
+
+## 🔒 Security
+
+The backend applies several layers of protection:
+
+- Laravel Sanctum authentication
+- Dedicated staff authentication guard
+- Role-based authorization
+- Department-based access control
+- Form Request validation
+- Protected API routes
+- User/staff ownership checks
+- Database relationships and foreign keys
+- Validation before performing dependent operations
+
+---
+
+## 🚀 Installation
+
+### Requirements
+
+Make sure the following are installed:
+
+- PHP
+- Composer
+- MySQL
+- Laravel
+- Node.js & npm
+- Git
+
+### 1. Clone the Repository
+
+    git clone https://github.com/esraaghneem/hotel-management.git
+
+Move into the project directory:
+
+    cd hotel-management
+
+### 2. Install PHP Dependencies
+
+    composer install
+
+### 3. Configure Environment
+
+Create the `.env` file:
+
+    copy .env.example .env
+
+Generate the application key:
+
+    php artisan key:generate
+
+Configure the database connection in `.env`:
+
+    DB_DATABASE=hotel_management
+    DB_USERNAME=your_username
+    DB_PASSWORD=your_password
+
+### 4. Run Migrations
+
+    php artisan migrate
+
+### 5. Create Storage Link
+
+    php artisan storage:link
+
+### 6. Start the Server
+
+    php artisan serve
+
+The API will be available at:
+
+    http://127.0.0.1:8000
+
+---
+
+## 🧪 API Testing
+
+The API was tested using **Postman**.
+
+Protected endpoints require a Sanctum Bearer Token.
+
+    Authorization: Bearer YOUR_TOKEN
+
+A typical authentication flow is:
+
+    Login
+      |
+    Receive Sanctum Token
+      |
+    Send Token with Protected Requests
+      |
+    Middleware Validates Authentication
+      |
+    Role / Department Authorization
+      |
+    Controller
+      |
+    Service
+      |
+    Database
+
+---
+
+## 🌐 Deployment
+
+The backend is deployed using **Railway**.
+
+Live deployment:
+
+    https://hotel-management-system-production-97bb.up.railway.app
+
+The project source code is available on GitHub:
+
+    https://github.com/esraaghneem/hotel-management
+
+---
+
+## 🧠 Key Backend Concepts Demonstrated
+
+This project demonstrates practical backend development concepts including:
+
+- REST API design
+- Laravel MVC
+- Service Layer architecture
+- Eloquent relationships
+- Form Request validation
+- API Resources
+- Authentication with Laravel Sanctum
+- Role-Based Access Control
+- Department-based authorization
+- Custom authentication guards
+- Database relationships
+- Business rule validation
+- Staff workload handling
+- Booking-dependent service requests
+- File/image handling
+- Protected API routes
+- API testing with Postman
+- Git/GitHub workflow
+- Laravel deployment with Railway
+
+---
+
+## 📌 Project Goals
+
+The project was developed to simulate real hotel operations while applying backend engineering principles such as:
+
+- Separation of concerns
+- Maintainable business logic
+- Secure authentication
+- Authorization
+- Data validation
+- Reusable services
+- Scalable API structure
+- Real-world business rules
+
+---
+
+## 👩‍💻 Author
+
+**Esraa Ghneem**
+
+Backend Developer
+
+GitHub:
+
+https://github.com/esraaghneem
+
+---
+
+## 📄 License
+
+This project was developed for educational and portfolio purposes.
